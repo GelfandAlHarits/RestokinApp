@@ -29,6 +29,12 @@
                             class="border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
                     </div>
                 @endif
+
+                <div>
+                    <button wire:click.prevent="clearFilter"
+                        class="px-3 py-1 bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors rounded-full"><i
+                            class="fas fa-redo mr-1"></i></i>Reset</button>
+                </div>
             </form>
             @if ($canExportReport ?? false)
                 <div class="flex gap-2">

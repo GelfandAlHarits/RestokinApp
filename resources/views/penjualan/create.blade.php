@@ -7,7 +7,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div class="lg:col-span-2 space-y-4">
             <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-                <h2 class="text-lg font-semibold text-gray-900 mb-4">Pilih Barang</h2>
+                <h2 class="text-lg font-semibold text-gray-900 mb-4">Pilih Produk</h2>
 
                 @if ($errors->any())
                     <div class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded mb-4">
@@ -22,7 +22,7 @@
                 <div class="flex gap-3 mb-4">
                     <button type="button" onclick="openProductModal()"
                         class="flex-1 border border-gray-300 rounded-lg px-4 py-2.5 text-left text-gray-500 hover:border-amber-500 hover:bg-amber-50 transition-colors">
-                        <i class="fas fa-search mr-2"></i>Cari dan Pilih Barang...
+                        <i class="fas fa-search mr-2"></i>Cari dan Pilih Produk...
                     </button>
                     <input type="number" id="jumlahInput" min="1" value="1" placeholder="Qty"
                         class="w-24 border border-gray-300 rounded-lg px-3 py-2.5 text-center">
@@ -32,7 +32,6 @@
                     </button>
                 </div>
 
-                {{-- Selected Product Preview --}}
                 <div id="selectedProductPreview" class="hidden bg-amber-50 border border-amber-200 rounded-lg p-3 mb-4">
                     <div class="flex items-center justify-between">
                         <div>
@@ -46,7 +45,6 @@
                     </div>
                 </div>
 
-                {{-- Item Table --}}
                 <div class="overflow-x-auto">
                     <table class="w-full text-sm">
                         <thead class="bg-gray-50 text-gray-700">
@@ -171,10 +169,7 @@
             Batal
         </a>
     </div>
-    </div>
-    </div>
 
-    {{-- Product Selection Modal --}}
     <div id="productModal" class="fixed inset-0 z-50 hidden">
         <div class="absolute inset-0 bg-black/50" onclick="closeProductModal()"></div>
         <div
