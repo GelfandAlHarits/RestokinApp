@@ -1,0 +1,29 @@
+{
+    "version": 2,
+    "framework": null,
+    "functions": {
+        "api/index.php": { "runtime": "vercel-php@0.7.1" }
+    },
+    "routes": [
+        {
+            "src": "/favicon.ico",
+            "dest": "/public/favicon.ico"
+        },
+        {
+            "src": "/(build|assets|css|js|img)/(.)",
+            "dest": "/public/$1/$2"
+        },
+        {
+            "src": "/(.)",
+            "dest": "/api/index.php"
+        }
+    ],
+    "env": {
+        "APP_ENV": "production",
+        "APP_DEBUG": "false",
+        "APP_URL": "https://restokin-app.vercel.app/",
+        "LOG_CHANNEL": "stack",
+        "SESSION_DRIVER": "cookie",
+        "CACHE_STORE": "array"
+    }
+}
