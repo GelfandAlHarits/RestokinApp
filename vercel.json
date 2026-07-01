@@ -7,12 +7,19 @@
     },
     "api/hello.php": {
       "runtime": "vercel-php@0.7.4"
+    },
+    "api/check.php": {
+      "runtime": "vercel-php@0.7.4"
     }
   },
   "routes": [
     {
       "src": "/__hello",
       "dest": "/api/hello.php"
+    },
+    {
+      "src": "/__check",
+      "dest": "/api/check.php"
     },
     {
       "src": "/build/(.*)",
